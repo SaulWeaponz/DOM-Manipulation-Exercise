@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show/Hide Password</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    input[type="password"], input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    label {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Show/Hide Password Toggle</h2>
+  <input type="password" id="passwordInput" placeholder="Enter your password">
+  <label>
+    <input type="checkbox" id="togglePassword"> Show Password
+  </label>
+
+  <script>
+    const passwordInput = document.getElementById('passwordInput');
+    const togglePassword = document.getElementById('togglePassword');
+
+    togglePassword.addEventListener('change', function () {
+      passwordInput.type = this.checked ? 'text' : 'password';
+    });
+  </script>
+
+</body>
+</html>
