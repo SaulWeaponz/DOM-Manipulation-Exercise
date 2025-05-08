@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Change Text Style</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #textBlock {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      width: 50%;
+    }
+    label {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Customize Text Style</h2>
+
+  <label for="fontSize">Font Size:</label>
+  <select id="fontSize">
+    <option value="16px">16px</option>
+    <option value="20px">20px</option>
+    <option value="24px">24px</option>
+    <option value="30px">30px</option>
+  </select>
+
+  <label for="fontColor">Font Color:</label>
+  <select id="fontColor">
+    <option value="black">Black</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="red">Red</option>
+  </select>
+
+  <label for="fontFamily">Font Family:</label>
+  <select id="fontFamily">
+    <option value="Arial">Arial</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Courier New">Courier New</option>
+    <option value="Verdana">Verdana</option>
+  </select>
+
+  <div id="textBlock">
+    Click the drop downs above to change me.
+  </div>
+
+  <script>
+    const textBlock = document.getElementById('textBlock');
+
+    document.getElementById('fontSize').addEventListener('change', function () {
+      textBlock.style.fontSize = this.value;
+    });
+
+    document.getElementById('fontColor').addEventListener('change', function () {
+      textBlock.style.color = this.value;
+    });
+
+    document.getElementById('fontFamily').addEventListener('change', function () {
+      textBlock.style.fontFamily = this.value;
+    });
+  </script>
+
+</body>
+</html>
